@@ -2,7 +2,6 @@
 import {Icon} from '@iconify/vue'
 import {ref} from 'vue'
 import {
-  CheckboxIndicator,
   NavigationMenuContent,
   NavigationMenuIndicator,
   NavigationMenuItem,
@@ -79,7 +78,7 @@ const menu = [
       v-model="currentTrigger"
       class="fixed z-[1] flex w-full justify-center align-middle"
   >
-    <NavigationMenuList class="center shadow-blackA7 m-0 flex list-none rounded-[6px] bg-[var(--nav-bg)] dark:bg-[var(--nav-bg-dark)] p-1 shadow-[0_2px_10px]">
+    <NavigationMenuList class="center shadow-blackA7 m-0 flex list-none rounded-[6px] bg-[var(--nav-bg)] dark:bg-[var(--secondary-bg-dark)] p-1 shadow-[0_2px_10px]">
       <NavigationMenuItem
           v-for="(item, index) in bigMenus"
           :key="index"

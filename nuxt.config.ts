@@ -17,6 +17,9 @@ export default defineNuxtConfig({
     '@tresjs/nuxt',
     '@nuxtjs/i18n'
   ],
+  tres: {
+    devtools: true,
+  },
   tailwindcss: {
     cssPath: '~/asssets/css/tailwind.css',
     configPath: 'tailwind.config.js',

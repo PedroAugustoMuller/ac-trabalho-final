@@ -6,10 +6,9 @@
     /*background*/
     --main-bg: #f3f5f4;
     --main-bg-dark: #121212;
-
+    --secondary-bg-dark: #181818;
     /*nav*/
     --nav-bg: #fff;
-    --nav-bg-dark: #181818;
 
     /*text*/
     --text: #000;
