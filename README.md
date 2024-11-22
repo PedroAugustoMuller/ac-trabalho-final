@@ -1,6 +1,6 @@
-# Nuxt Minimal Starter
-
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+##Questify
+#Practice of the final assignment of the Computer Applications course
+#Main Technologies: Nuxt, Pinia, TresJs and TailwindCss 
 
 ## Setup
 
