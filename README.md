@@ -1,6 +1,6 @@
-## Questify
-# Practice of the final assignment of the Computer Applications course
-# Main Technologies: Nuxt, Pinia, TresJs and TailwindCss 
+# Questify
+## Practice of the final assignment of the Computer Applications course
+## Main Technologies: Nuxt, Pinia, TresJs and TailwindCss 
 
 ## Setup
 
