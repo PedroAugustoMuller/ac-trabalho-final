@@ -1,7 +1,7 @@
 import type {Tarefa} from "~/types/Tarefa";
 
-export const useTarefa = defineStore('tarefa',() =>{
-    async function fetchTarefa() : Promise<Array<Tarefa>> {
+export const useTarefa = defineStore('tarefa', () => {
+    async function fetchTarefa(): Promise<Array<Tarefa>> {
         return [
             {
                 id: 1,
