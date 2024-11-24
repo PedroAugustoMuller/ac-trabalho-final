@@ -1,4 +1,4 @@
-import type {Tarefa} from "~/types/Tarefa";
+import type {Tarefa} from "@/types/Tarefa";
 
 export const useTarefa = defineStore('tarefa', () => {
     async function fetchTarefa(): Promise<Array<Tarefa>> {
@@ -9,7 +9,7 @@ export const useTarefa = defineStore('tarefa', () => {
                 description: 'Conteúdos: Trigonometria e Retas',
                 date: '2019-02-01',
                 situacao: 0,
-                difficulty: 4
+                difficulty: 3
             },
             {
                 id: 2,
@@ -17,7 +17,7 @@ export const useTarefa = defineStore('tarefa', () => {
                 description: 'Pesquisa sobre Dom Casmurro',
                 date: '2019-02-01',
                 situacao: 1,
-                difficulty: 2
+                difficulty: 1
             },
             {
                 id: 3,
@@ -25,7 +25,7 @@ export const useTarefa = defineStore('tarefa', () => {
                 description: 'Apresentações sobre iluminismo',
                 date: '2019-02-01',
                 situacao: 2,
-                difficulty: 1
+                difficulty: 0
             },
             {
                 id: 4,
@@ -33,7 +33,7 @@ export const useTarefa = defineStore('tarefa', () => {
                 description: 'Escrever um relatório sobre todas as atividades discorridas entre janeiro e junho',
                 date: '2019-02-01',
                 situacao: 2,
-                difficulty: 3
+                difficulty: 2
             },
         ]
     }

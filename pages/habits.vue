@@ -8,7 +8,7 @@ useHead({
 
 <template>
   <DefaultLayout
-    title="Calendar"
+    title="Habits"
   >
 
   </DefaultLayout>

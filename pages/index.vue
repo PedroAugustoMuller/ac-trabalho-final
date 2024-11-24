@@ -2,7 +2,7 @@
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import NewTarefaCard from "@/components/Tarefa/NewTarefaCard.vue";
 import type {Tarefa} from "@/types/Tarefa";
-import { useTarefa } from "~/store/Tarefa";
+import { useTarefa } from "@/store/Modules/Tarefa";
 const tarefaStore = useTarefa();
 
 useHead({
