@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { useGLTF } from "@tresjs/cientos";
-import {Primitive} from "radix-vue";
 
-const {scene} = await useGLTF('models/source/goblin.gltf', {draco: true})
-
-onMounted(()=> console.log(teste))
+const {scene} = await useGLTF('models/goblin/source/goblin.gltf', {draco: true})
 
 </script>
 
 <template>
-  <primitive :object="scene"/>
+  <primitive :object="scene"
+             :rotation="[0, Math.PI, 0]"
+             :position="[0, -.4, 0]"
+  />
 </template>
 
 <style scoped>

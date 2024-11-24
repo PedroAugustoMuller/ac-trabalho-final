@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image',
     '@tresjs/nuxt',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxt/icon'
   ],
   tres: {
     devtools: true,

@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import type {Tarefa} from "~/types/Tarefa";
 
+const props = defineProps({
+  tarefa: {
+    type: Object as () => Tarefa,
+    default: {},
+  }
+})
 </script>
 
 <template>
