@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@tresjs/nuxt',
     '@nuxtjs/i18n',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    'vuetify-nuxt-module'
   ],
   tres: {
     devtools: true,

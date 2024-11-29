@@ -26,6 +26,7 @@
     "radix-vue": "^1.9.9",
     "three": "^0.170.0",
     "vue": "^3.5.12",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vuetify-nuxt-module": "^0.18.3"
   }
 }

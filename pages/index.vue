@@ -10,7 +10,7 @@ const showFormTarefaModal = ref(false);
 
 const toggleFormTarefaModal = () => showFormTarefaModal.value = !showFormTarefaModal.value;
 
-const selectedTarefa = ref<Tarefa | null>(null)
+const selectedTarefa = ref(null)
 
 useHead({
   title: 'Dashboard',
@@ -45,6 +45,8 @@ function handleOpenTarefaModal(tarefa: Tarefa | null) {
     />
     <TarefaModal
         v-if="showFormTarefaModal"
+        :tarefa="selectedTarefa"
+        @close="toggleFormTarefaModal"
     />
   </DefaultLayout>
 </template>
