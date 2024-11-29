@@ -3,8 +3,8 @@ import {TresCanvas} from "@tresjs/core";
 import {OrbitControls} from "@tresjs/cientos";
 import Goblin from "~/components/enemies/minecraft/Goblin.vue";
 import Dragon from "~/components/enemies/minecraft/Dragon.vue";
-import NetheriteGolem from "~/components/enemies/minecraft/NetheriteGolem.vue";
 import Barbarian from "~/components/enemies/minecraft/Barbarian.vue";
+import MutantDrowned from "~/components/enemies/minecraft/MutantDrowned.vue";
 
 const props = defineProps({
   difficulty: {
@@ -31,7 +31,7 @@ const props = defineProps({
     </template>
     <template v-if="difficulty == 2">
       <Suspense>
-        <NetheriteGolem/>
+        <MutantDrowned/>
       </Suspense>
     </template>
     <template v-if="difficulty == 3">

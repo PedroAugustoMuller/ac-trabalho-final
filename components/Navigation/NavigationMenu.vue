@@ -59,7 +59,7 @@ const menus = [
 <template>
   <NavigationMenuRoot
       v-model="currentTrigger"
-      class="fixed z-[1] flex w-full justify-center align-middle"
+      class="fixed z-40 flex w-full justify-center align-middle"
   >
     <NavigationMenuList class="center shadow-blackA7 m-0 flex list-none rounded-[6px] bg-[var(--nav-bg)] dark:bg-[var(--secondary-bg-dark)] p-1 shadow-[0_2px_10px]">
       <NavigationMenuItem
@@ -124,7 +124,7 @@ const menus = [
         ></nuxt-img>
       </NavigationMenuItem>
       <NavigationMenuIndicator
-          class="data-[state=hidden]:opacity-0 duration-200 data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full z-[1] flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]"
+          class="data-[state=hidden]:opacity-0 duration-200 data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full z-40 flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]"
       >
         <div class="relative top-[70%] h-[10px] w-[10px] rotate-[45deg] rounded-tl-[2px] bg-white"/>
       </NavigationMenuIndicator>

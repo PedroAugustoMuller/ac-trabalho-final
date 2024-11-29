@@ -2,7 +2,7 @@
 import { useGLTF } from "@tresjs/cientos";
 import {AnimationMixer, Clock} from "three";
 
-const { scene, animations } = await useGLTF("models/enemies/minecraft/netherite-golem/scene.gltf", { draco: true });
+const { scene, animations } = await useGLTF("models/enemies/minecraft/mutant-drowned/source/mutant-drowned.gltf", { draco: true });
 
 let mixer : AnimationMixer;
 const clock = new Clock();
@@ -28,10 +28,10 @@ function animate() {
 </script>
 
 <template>
-  <TresPerspectiveCamera :position="[4, 2, 6]"/>
+  <TresPerspectiveCamera :position="[2, 1, 6]"/>
   <primitive :object="scene"
              :rotation="[0, Math.PI, 0]"
-             :position="[0, -5, 0]"
+             :position="[0, -1, 0]"
   />
 </template>
 

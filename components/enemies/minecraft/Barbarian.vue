@@ -28,10 +28,10 @@ function animate() {
 </script>
 
 <template>
-  <TresPerspectiveCamera :position="[4, 2, 6]"/>
+  <TresPerspectiveCamera :position="[1, 1, 3]"/>
   <primitive :object="scene"
              :rotation="[0, Math.PI, 0]"
-             :position="[0, -5, 0]"
+             :position="[0, -0.4, 0]"
   />
 </template>
 

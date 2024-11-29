@@ -6,7 +6,7 @@
 ### "Devil dragon - Minecraft - Free" (https://skfb.ly/oxYrU) by geni_o_o is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 # Zombie
 ### "Zombie" (https://skfb.ly/6RKZD) by Blender3D is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
-# Netherite Golem
-### "Minecraft - Netherite Golem" (https://skfb.ly/ozQpN) by Sam Torres is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 # Barbarian
 ### "Barbarian" (https://skfb.ly/oqBOX) by Employee of the Month is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+# Mutant Drowned
+### "Minecraft Animated Mutant Drowned" (https://skfb.ly/oonDG) by CanYuTsai is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
