@@ -15,8 +15,13 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image',
     '@tresjs/nuxt',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxt/icon',
+    'vuetify-nuxt-module'
   ],
+  tres: {
+    devtools: true,
+  },
   tailwindcss: {
     cssPath: '~/asssets/css/tailwind.css',
     configPath: 'tailwind.config.js',
