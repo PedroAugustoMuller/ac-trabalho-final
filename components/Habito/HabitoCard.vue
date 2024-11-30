@@ -30,5 +30,5 @@ const propsCard = defineProps({
   </template>
   
   <style scoped>
-  /* Aqui podemos adicionar estilos extras, mas o hover é gerenciado pelas classes do Tailwind */
+  
   </style>
