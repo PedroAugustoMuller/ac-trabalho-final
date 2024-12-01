@@ -1,4 +1,4 @@
-<script  state lang="ts">
+<script lang="ts">
 
 </script>
 
