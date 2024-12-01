@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type {Tarefa} from "~/types/Tarefa";
+import { VDateInput } from 'vuetify/labs/VDateInput'
 
 const props = defineProps({
   tarefa: {
@@ -55,6 +56,8 @@ onMounted(()=> console.log(props.tarefa))
               :rules="[rules.obrigatorio]"
               color="var(--text-highlight)"
               class="w-full"
+              variant="outlined"
+              :readonly="loading"
           />
           <v-text-field
               label="Descrição Tarefa"
@@ -63,13 +66,24 @@ onMounted(()=> console.log(props.tarefa))
               :rules="[rules.obrigatorio]"
               color="var(--text-highlight)"
               class="w-full"
+              variant="outlined"
+              :readonly="loading"
           />
           <v-select
               label="Dificuldade"
               class="w-full"
+              color="var(--text-highlight)"
+              variant="outlined"
+              :readonly="loading"
           />
           <v-date-input
             label="Data de Entrega"
+            class="w-full"
+            color="var(--text-highlight)"
+            clearable
+            variant="outlined"
+            widht="10"
+            :readonly="loading"
           />
         </div>
         <v-btn

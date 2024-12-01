@@ -5,6 +5,7 @@
 :root{
     /*background*/
     --main-bg: #f3f5f4;
+    --secondary-bg: #fff;
     --main-bg-dark: #121212;
     --secondary-bg-dark: #181818;
     --card-bg-dark: #242424;

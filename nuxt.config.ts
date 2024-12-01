@@ -22,6 +22,21 @@ export default defineNuxtConfig({
   tres: {
     devtools: true,
   },
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+      },
+      {
+        code: 'pt',
+        name: 'Portuguese',
+      }
+    ],
+    defaultLocale: 'pt',
+    strategy: 'no_prefix',
+    vueI18n: './i18n.config.ts'
+  },
   tailwindcss: {
     cssPath: '~/asssets/css/tailwind.css',
     configPath: 'tailwind.config.js',
