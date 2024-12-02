@@ -8,8 +8,12 @@ import DefaultLayout from "~/layouts/DefaultLayout.vue";
 <template>
   <DefaultLayout
       title="The team"
+      :grid="false"
   >
-
+    <nuxt-img
+        style="width: 800px"
+        src="images/theteammock.png"
+    ></nuxt-img>
   </DefaultLayout>
 </template>
 

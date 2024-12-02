@@ -38,17 +38,17 @@ const menus = [
     ]
   },
   {
-    title: 'About',
+    title: 'about',
     subMenus: [
       {
         title: 'The team',
         description: '',
-        route: '/About/team'
+        route: '/about/team'
       },
       {
         title: 'The tools',
         description: '',
-        route: '/About/tools'
+        route: '/about/tools'
       }
     ]
   }
@@ -118,10 +118,14 @@ const menus = [
         <ModeSwitch/>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <nuxt-img
-            class=" mx-2 w-12 rounded-full"
-            src="https://github.com/PedroAugustoMuller.png"
-        ></nuxt-img>
+        <NuxtLink
+            to="profile"
+        >
+          <nuxt-img
+              class=" mx-2 w-12 rounded-full"
+              src="https://github.com/PedroAugustoMuller.png"
+          ></nuxt-img>
+        </NuxtLink>
       </NavigationMenuItem>
       <NavigationMenuIndicator
           class="data-[state=hidden]:opacity-0 duration-200 data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full z-40 flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]"
