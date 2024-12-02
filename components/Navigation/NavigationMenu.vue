@@ -2,7 +2,6 @@
 import {Icon} from '@iconify/vue'
 import {ref} from 'vue'
 import {
-  CheckboxIndicator,
   NavigationMenuContent,
   NavigationMenuIndicator,
   NavigationMenuItem,
@@ -17,7 +16,7 @@ import ModeSwitch from "~/components/Navigation/ModeSwitch.vue";
 
 const currentTrigger = ref('')
 
-const bigMenus = [
+const menus = [
   {
     title: 'Questify',
     subMenus: [
@@ -54,34 +53,17 @@ const bigMenus = [
     ]
   }
 ]
-const menu = [
-  {
-    title: 'Dashboard',
-    description: 'A place where you can track all your quests',
-    route: '/',
-  },
-  {
-    title: 'Habits',
-    description: 'A place to create, edit or delete habits',
-    route: '/habits',
-  },
-  {
-    title: 'Calendar',
-    description: 'A place where you can see your schedule',
-    route: '/calendar',
-  },
-]
 
 </script>
 
 <template>
   <NavigationMenuRoot
       v-model="currentTrigger"
-      class="fixed z-[1] flex w-full justify-center align-middle"
+      class="fixed z-40 flex w-full justify-center align-middle"
   >
-    <NavigationMenuList class="center shadow-blackA7 m-0 flex list-none rounded-[6px] bg-[var(--nav-bg)] dark:bg-[var(--nav-bg-dark)] p-1 shadow-[0_2px_10px]">
+    <NavigationMenuList class="center shadow-blackA7 m-0 flex list-none rounded-[6px] bg-[var(--nav-bg)] dark:bg-[var(--secondary-bg-dark)] p-1 shadow-[0_2px_10px]">
       <NavigationMenuItem
-          v-for="(item, index) in bigMenus"
+          v-for="(item, index) in menus"
           :key="index"
       >
         <NavigationMenuTrigger
@@ -94,9 +76,16 @@ const menu = [
           />
         </NavigationMenuTrigger>
         <NavigationMenuContent
-            class="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-auto"
+            class="
+            data-[motion=from-start]:animate-enterFromLeft
+            data-[motion=from-end]:animate-enterFromRight
+            data-[motion=to-start]:animate-exitToLeft
+            data-[motion=to-end]:animate-exitToRight
+            absolute top-0 left-0
+            w-full sm:w-auto
+            dark:bg-[var(--card-bg-dark)]"
         >
-          <ul class="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[400px] sm:grid-cols-[0.75fr_1fr]">
+          <ul class="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[400px] sm:grid-cols-[0.75fr_1fr] dark:bg-[var(--card-bg-dark)]">
             <NavigationMenuListItem
                 v-if="item.subMenus"
                 v-for="(subItem,index) in item.subMenus"
@@ -106,8 +95,8 @@ const menu = [
                   :to="subItem.route"
               >
                 <div>
-                  <b class="border-b">{{ subItem.title }}</b>
-                  <p>{{ subItem.description }}</p>
+                  <b class="border-b dark:border-[var(--text-highlight)] dark:text-[var(--text-dark)]">{{ subItem.title }}</b>
+                  <p class="dark:text-[var(--text-secondary-dark)]">{{ subItem.description }}</p>
                 </div>
               </NuxtLink>
             </NavigationMenuListItem>
@@ -135,15 +124,15 @@ const menu = [
         ></nuxt-img>
       </NavigationMenuItem>
       <NavigationMenuIndicator
-          class="data-[state=hidden]:opacity-0 duration-200 data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full z-[1] flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]"
+          class="data-[state=hidden]:opacity-0 duration-200 data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full z-40 flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]"
       >
-        <div class="relative top-[70%] h-[10px] w-[10px] rotate-[45deg] rounded-tl-[2px] bg-white"/>
+        <div class="relative top-[70%] h-[10px] w-[10px] rotate-[45deg] rounded-tl-[2px] bg-[var(--secondary-bg)] dark:bg-[var(--secondary-bg-dark)]"/>
       </NavigationMenuIndicator>
     </NavigationMenuList>
 
     <div class="perspective-[2000px] absolute top-full left-0 flex w-full justify-center">
       <NavigationMenuViewport
-          class="data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-[10px] h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-[10px] bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]"
+          class=" bg-[var(--nav-bg)]  dark:bg-[var(--secondary-bg-dark)] data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-[10px] h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-[10px] transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]"
       />
     </div>
   </NavigationMenuRoot>
