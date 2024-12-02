@@ -3,7 +3,6 @@ import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import NewTarefaCard from "@/components/Tarefa/NewTarefaCard.vue";
 import type {Tarefa} from "~/types/Tarefa/Tarefa";
 import {useTarefa} from "@/store/Modules/Tarefa";
-import type {Habit} from "~/types/Habit";
 
 useHead({
   title: 'Dashboard',
@@ -13,15 +12,17 @@ const tarefaStore = useTarefa();
 
 const tarefas = ref<Tarefa[]>([]);
 
-const showFormTarefaModal = ref(<Boolean>false);
-
 const selectedTarefa = ref(<Tarefa | null>{})
+
+const showTarefaFormModal = ref(false);
 
 const showErrorModal = ref(<Boolean>false);
 
 const errorMessage = ref(<string>'');
 
-const toggleFormTarefaModal = () => showFormTarefaModal.value = !showFormTarefaModal.value;
+const passedOpenModal = ref(false);
+
+const toggleTarefaFormModal = () => showTarefaFormModal.value = !showTarefaFormModal.value;
 
 const toggleErrorModal = () => showErrorModal.value = !showErrorModal.value
 
@@ -31,7 +32,7 @@ async function fetchTarefas() {
 
 function handleOpenTarefaModal(tarefa: Tarefa | null) {
   selectedTarefa.value = tarefa;
-  toggleFormTarefaModal()
+  toggleTarefaFormModal()
 }
 
 async function atualizaPagina() {
@@ -39,10 +40,16 @@ async function atualizaPagina() {
 }
 
 function handleError(error: Error) {
-  showFormTarefaModal.value = false;
   errorMessage.value = error.message;
   toggleErrorModal();
 }
+
+watch(() => passedOpenModal.value, newValue => {
+  console.log(newValue)
+  if (newValue) {
+    handleOpenTarefaModal(null);
+  }
+})
 
 onMounted(fetchTarefas);
 </script>
@@ -51,28 +58,30 @@ onMounted(fetchTarefas);
   <DefaultLayout
       title="Dashboard"
   >
-    <TarefaCard
-        v-for="(tarefa, index) in tarefas"
-        :key="index"
-        :tarefa="tarefa"
-        :title="tarefa.title"
-        :description="tarefa.description"
-        :date="tarefa.date"
-        :difficulty="tarefa.difficulty"
-        @open-tarefa-modal="handleOpenTarefaModal(tarefa)"
-        @atualizou="atualizaPagina"
-        @erro="(error: Error) => handleError(error)"
-    />
-    <NewTarefaCard
-        @open-tarefa-modal="(tarefa) => handleOpenTarefaModal(tarefa)"
-    />
-    <TarefaModal
-        v-if="showFormTarefaModal"
-        :tarefa="selectedTarefa"
-        @close="toggleFormTarefaModal"
-        @atualizou="atualizaPagina"
-        @erro="(error: Error) => handleError(error)"
-    />
-    <!--    <ErroModal/>-->
+    <template #default="{ passedOpenModal: modal }">
+      <TarefaCard
+          v-for="(tarefa, index) in tarefas"
+          :key="index"
+          :tarefa="tarefa"
+          :title="tarefa.title"
+          :description="tarefa.description"
+          :date="tarefa.date"
+          :difficulty="tarefa.difficulty"
+          @open-tarefa-modal="handleOpenTarefaModal(tarefa)"
+          @atualizou="atualizaPagina"
+          @erro="(error: Error) => handleError(error)"
+      />
+      <NewTarefaCard
+          @open-tarefa-modal="toggleTarefaFormModal"
+      />
+      <TarefaModal
+          v-if="showTarefaFormModal"
+          :tarefa="selectedTarefa"
+          @close="toggleTarefaFormModal"
+          @atualizou="atualizaPagina"
+          @erro="(error: Error) => handleError(error)"
+      />
+      <!--    <ErroModal/>-->
+    </template>
   </DefaultLayout>
 </template>
