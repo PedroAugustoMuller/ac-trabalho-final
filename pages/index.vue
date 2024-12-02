@@ -3,7 +3,6 @@ import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import NewTarefaCard from "@/components/Tarefa/NewTarefaCard.vue";
 import type {Tarefa} from "~/types/Tarefa/Tarefa";
 import {useTarefa} from "@/store/Modules/Tarefa";
-import type {Habit} from "~/types/Habit";
 
 useHead({
   title: 'Dashboard',
